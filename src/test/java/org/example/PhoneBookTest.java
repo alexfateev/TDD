@@ -45,4 +45,19 @@ public class PhoneBookTest {
         String result = phoneBook.findByNumber("0000");
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    public void testFinByName() {
+        String expected = "01234";
+        String result = phoneBook.findByName("Petya");
+        Assertions.assertEquals(expected, result);
+    }
+
+    @Test
+    public void testFindByNameNotFound() {
+        Assertions.assertEquals(
+                phoneBook.findByName("012334"),
+                "not found"
+        );
+    }
 }
