@@ -1,4 +1,14 @@
 package org.example;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class PhoneBook {
+    private String name;
+    private String number;
+    private Map<String, String> contacts = new HashMap<>();
+
+    public int add(String name, String number) {
+        return 0;
+    }
 }
