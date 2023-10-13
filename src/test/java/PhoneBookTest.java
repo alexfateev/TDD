@@ -22,4 +22,11 @@ public class PhoneBookTest {
         int expected = count;
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    public void testFindByNumber() {
+        String expected = "name1";
+        String result = phoneBook.findByNumber("012345");
+        Assertions.assertEquals(expected, result);
+    }
 }

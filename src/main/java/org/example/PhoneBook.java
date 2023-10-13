@@ -12,4 +12,12 @@ public class PhoneBook {
         contacts.putIfAbsent(name, number);
         return contacts.size();
     }
+
+    public String findByNumber(String number) {
+        return null;
+    }
+
+    public String findByName(String name) {
+        return null;
+    }
 }
