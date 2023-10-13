@@ -1,11 +1,10 @@
 package org.example;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PhoneBook {
-    private Map<String, String> names = new HashMap<>();
-    private Map<String, String> numbers = new HashMap<>();
+    private Map<String, String> names = new TreeMap<>();
+    private Map<String, String> numbers = new TreeMap<>();
 
     public int add(String name, String number) {
         if (!names.containsKey(name)) {
@@ -20,6 +19,10 @@ public class PhoneBook {
     }
 
     public String findByName(String name) {
-        return null;
+        return names.getOrDefault(name, "not found");
+    }
+
+    public void printAllNames() {
+        names.entrySet().stream().forEach( i -> System.out.println(i.getKey() + ": " + i.getValue()));
     }
 }
